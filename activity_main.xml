@@ -1,0 +1,70 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:title="Internee.pk"
+            android:titleTextColor="@android:color/black"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white" />
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:padding="16dp"
+            android:gravity="center"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/aboutUsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Internee.pk kickstarts students' tech careers with first internships, providing industry exposure, practical skills, and networking opportunities, paving the way for their success in the tech industry."
+            android:textSize="24sp"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/contactDetailsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact: careers@internee.pk"
+            android:textSize="24sp"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"
+        android:background="@android:color/white"/>
+</androidx.drawerlayout.widget.DrawerLayout>
